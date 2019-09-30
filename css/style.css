@@ -9,23 +9,87 @@ body{
     background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
     background-repeat: no-repeat;
     margin: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
     width: 400px;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color:white;
     margin: 0 auto;
 }
 
-#form{
+.tituloContainer{
+    width: 100%;
+    height: 70px;
     display: flex;
-    flex-direction: column;   
+    align-items: center;
+    justify-content: space-around;
 }
+
+.tituloContainer > h1{
+    font-size: 18px;
+}
+
+#form{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+   
+}
+
+.inputContainer{
+    height: 120px;
+    border: solid 1px rgba(175, 174, 174, 0.582);  
+}
+
+.btnAdicionar{
+    height: 45px;
+    background-color: #ba7af8;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.btnContainer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnFeito{
+    height: 25px;
+    background-color: #ba7af8;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.btnLimpar{
+    height: 25px;
+    background-color: #ba7af8;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
 
 
 
