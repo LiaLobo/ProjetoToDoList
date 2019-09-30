@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.container{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;   
+}
+
+
+
+
+
+
+
+
+
+
+/* font-family: 'Open Sans', sans-serif; */
+/* Cor do background #8ec5fc (azul) e #e0c3fc (roxinho) */
+/* Cor botão de adicionar #ba7af8 */
