@@ -64,17 +64,16 @@ form.addEventListener("submit", function(evento){
         //criar evento no botão para dar check em todas as tarefas
 
         btnFeito.addEventListener('click', function() {
-            inserirTarefa.classList.add('check')
-        
-            
-            
+            elementoLista.classList.add('check')
         })
 
         //criar evento no outro botão para limpar todas as tarefas
 
+        btnLimpar.addEventListener('click', function() {
 
-
-
+            elementoLista.classList.add('remover')
+            excluir.classList.add('remover')
+        })
 
     }
 })
