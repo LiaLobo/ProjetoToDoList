@@ -99,7 +99,13 @@ body{
 }
 
 
+.check {
+    color: green; 
+    text-decoration: line-through; 
+}
+
 
 /* font-family: 'Open Sans', sans-serif; */
 /* Cor do background #8ec5fc (azul) e #e0c3fc (roxinho) */
 /* Cor botão de adicionar #ba7af8 */
+/* text-decoration: line-through; */

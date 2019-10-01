@@ -27,9 +27,34 @@ form.addEventListener("submit", function(evento){
         elementoLista.textContent = valorMensagem
         inserirTarefa.appendChild(elementoLista)
         form.reset()
+        
+        elementoLista.addEventListener('click', function(evento){
+            if (elementoLista.classList.contains('check')) {
+                elementoLista.classList.remove('check')
+            } else {
+                elementoLista.classList.add('check')
+            }
+
+        })
     }
 
+
+
+
 })
+
+// 1. no css criar uma class pro javascript x
+// criar o evento de tarefa 
+// dentro desse evento colocar um if else, 
+// se a pessoa clicar ele dá um check. 
+// se clicar ele descheck. 
+
+
+// 2. criar uma const pra criar um novo elemento 
+// // colocar conteudo x 
+// // evento click 
+// // remover o x 
+
 
 
 
