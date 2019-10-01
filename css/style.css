@@ -19,7 +19,6 @@ body{
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color:white;
     margin: 0 auto;
@@ -39,11 +38,15 @@ body{
 
 #form{
     width: 100%;
-    height: 300px;
     display: flex;
     flex-direction: column; 
     justify-content: flex-start;
    
+}
+
+.error{
+    color: red;
+    font-size: 10px;
 }
 
 .inputContainer{
@@ -64,7 +67,7 @@ body{
 .btnContainer{
     width: 100%;
     height: 70px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
 }
@@ -89,14 +92,11 @@ body{
     letter-spacing: 3px;
 }
 
-
-
-
-
-
-
-
-
+#tarefasLista {
+    width: 90%; 
+    height: 200px; 
+    overflow-y: auto;
+}
 
 
 
