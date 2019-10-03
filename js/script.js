@@ -45,7 +45,7 @@ form.addEventListener("submit", function(evento){
         
         form.reset()
 
-        //Atribuir o draggable para todos os elementos que serão mexidos.
+        //Atribuir o draggable para todos os elementos que serão arrastados.
         inserirTarefa.setAttribute('draggable', true)
         elementoLista.setAttribute('draggable', true)
         excluir.setAttribute('draggable', true)
@@ -94,7 +94,7 @@ form.addEventListener("submit", function(evento){
         //dragover é para arrastar o elemento. Funciona como uma sombra que segura o elemento que estava no start para conseguirmos deslocar 
         inserirTarefa.addEventListener('dragover', function(e) {
             e.preventDefault()
-            //esse preventDefault permite com que o elemento seja arrastado. Pois por padrão ele não permmite arrstar, somente agarrar e soltar 
+            //esse preventDefault permite com que o elemento seja arrastado. Pois por padrão ele não permmite arrastar, somente agarrar e soltar 
             const node = e.target.closest('.borda')
             //CLOSEST pega o elemento mais próximo da caixa principal que adicionamos o evento. Ele aceita somente elementos do DOM/HTML
             this.insertBefore(dragging, node)
