@@ -74,9 +74,10 @@ form.addEventListener("submit", function(evento){
             }
         })
 
-        // deixamos o conteudo da lista editavel
 
         // document.getElementById("tarefasLista").contentEditable = "true";
+
+        // DEIXAMOS O CONTEUDO EDITAVEL
 
         elementoLista.addEventListener('dblclick', function() {
             elementoLista.classList.remove('check')

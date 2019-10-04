@@ -6,12 +6,17 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
-    background-repeat: no-repeat;
+    /* background-image: linear-gradient(to right, #e0c3fc, #8ec5fc); */
+    /* background-repeat: no-repeat; */
     margin: 0;
     display: flex; 
     justify-content: center;
     align-items: center;
+    background-image: url("../imagens/background.jpg");
+    background-size: 1400px;
+    background-attachment: fixed;
+
+    
 }
 
 .container{
@@ -31,6 +36,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
 }
 
 .tituloContainer > h1{
@@ -62,7 +68,8 @@ body{
 
 .btnAdicionar{
     height: 45px;
-    background-color: #ba7af8;
+    /* background-color: #ba7af8; */
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
     border-style: none;
     color: white;
     font-weight: bold;
@@ -82,36 +89,36 @@ body{
 }
 
 .btnFeito{
-    height: 27px;
+    height: 40px;
     background-color: #ba7af8;
     border-style: none;
     color: white;
     font-weight: bold;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 3px;
     cursor: pointer;
     width: 100px;
 }
 
 .btnLimpar{
-    height: 27px;
+    height: 30px;
     background-color: #ba7af8;
     border-style: none;
     color: white;
     font-weight: bold;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 3px;
     cursor: pointer;
     width: 100px;
 }
 
 .btnLimparFeitos {
-    height: 27px;
+    height: 30px;
     background-color: #ba7af8;
     border-style: none;
     color: white;
     font-weight: bold;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 3px;
     cursor: pointer;
     width: 100px;
@@ -157,12 +164,12 @@ body{
 
 .etiqueta{
     width: 20%;
-    height: 70%;
+    height: 90%;
     float: right; 
     text-align: center; 
     background-color: rgba(175, 174, 174, 0.678); 
     /* box-shadow: 3px 2px rgba(255, 255, 255, 0.89); */
-    font-size: 8px; 
+    font-size: 11px; 
     font-weight: lighter;
 }
 
@@ -175,7 +182,7 @@ body{
 
 /* ------------------ MEDIA QUERY ------------------ */
 
-@media(max-width: 760px){
+@media (max-width: 760px){
 
     .container {
         width: 600px;
@@ -184,7 +191,7 @@ body{
 
     .tituloContainer{
         width: 100%;
-        height: 150px;
+        height: 15px;
     }
 
     .tituloContainer > h1{
@@ -223,7 +230,7 @@ body{
     }
 }
 
-@media(min-width: 320px){
+@media(max-width: 320px){
 
     .container {
         width: 350px;
@@ -260,7 +267,7 @@ body{
     }
     
     .btnFeito{
-        height: 30px;
+        height: 50px;
         font-size: 12px;
         letter-spacing: 1px;
         
