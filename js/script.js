@@ -19,6 +19,8 @@ const btnLimpar = document.querySelector('.btnLimpar')
 
 const btnFeito = document.querySelector('.btnFeito')
 
+const btnLimparFeitos = document.querySelector('.btnLimparFeitos')
+
 let dragging = null
 
 form.addEventListener("submit", function(evento){
@@ -27,8 +29,11 @@ form.addEventListener("submit", function(evento){
     let mensagemUsuario = document.querySelector(".inputContainer")
     let valorMensagem = mensagemUsuario.value 
 
-    if (valorMensagem.trim() ==="" ) {
-        erro.textContent = 'Digite uma tarefa'
+    let mensagemEtiqueta = document.querySelector('.inputEtiqueta')
+    let valorEtiqueta = mensagemEtiqueta.value
+
+    if ( (valorMensagem.trim() ==="" ) || (valorEtiqueta.trim() === '') ) {
+        erro.textContent = 'Digite um texto'
     } else {
         erro.textContent = "" 
         let elementoLista = document.createElement("p")
@@ -43,6 +48,12 @@ form.addEventListener("submit", function(evento){
         elementoLista.appendChild(excluir)
         excluir.classList.add('delete')
         
+        let elementoEtiqueta = document.createElement('span')
+        elementoEtiqueta.textContent = valorEtiqueta
+        elementoLista.appendChild(elementoEtiqueta)
+        elementoEtiqueta.classList.add('etiqueta')
+
+
         form.reset()
 
         //Atribuir o draggable para todos os elementos que serão arrastados.
@@ -61,6 +72,16 @@ form.addEventListener("submit", function(evento){
             } else {
                 elementoLista.classList.add('check')
             }
+        })
+
+        // deixamos o conteudo da lista editavel
+
+        // document.getElementById("tarefasLista").contentEditable = "true";
+
+        elementoLista.addEventListener('dblclick', function() {
+            elementoLista.classList.remove('check')
+            elementoLista.setAttribute("contentEditable", true)
+        
         })
 
         // // evento click 
@@ -85,6 +106,16 @@ form.addEventListener("submit", function(evento){
             excluir.classList.add('remover')
         })
 
+        // criar evento de limpar todas as tarefas feitas
+
+        btnLimparFeitos.addEventListener('click', function() {
+            if (elementoLista.classList.contains('check')) {
+                elementoLista.classList.add('remover')
+            }
+            
+        })
+
+
          //Temos que adicionar o evento na caixa maior 
         inserirTarefa.addEventListener('dragstart', function(e) {
             dragging = e.target.closest('.borda')
@@ -105,6 +136,9 @@ form.addEventListener("submit", function(evento){
             dragging = null
             //deixamos o valor null para conseguirmos pegar outro elemento que queremos arrastar
         })
+
+        
+
     }
 })
 
